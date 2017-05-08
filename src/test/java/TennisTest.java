@@ -66,7 +66,7 @@ public class TennisTest {
         });
     }
 
-    public void checkAllScores(TennisGame game) {
+    public void checkAllScores(ITennisGame game) {
         int highestScore = Math.max(this.player1Score, this.player2Score);
         for (int i = 0; i < highestScore; i++) {
             if (i < this.player1Score)
@@ -79,7 +79,7 @@ public class TennisTest {
 
     @Test
     public void checkAllScoresTennisGame1() {
-        TennisGame1 game = new TennisGame1("player1", "player2");
+        TennisGameImpl game = new TennisGameImpl("player1", "player2");
         checkAllScores(game);
     }
 
